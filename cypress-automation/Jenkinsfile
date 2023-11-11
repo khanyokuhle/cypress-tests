@@ -1,0 +1,25 @@
+pipeline {
+	agent any
+	stages {
+		stage('Clone Git Repo'){
+				steps{
+					git 'https://github.com/khanyokuhle/cypress-tests.git'
+		    }
+		}
+		stage('Install Dependencies'){
+				steps{
+					npm install &&
+				}
+		}
+		stage('Run Tests'){
+				steps{
+					npm run-test
+				}
+		}
+		stage('Publish HTML Report'){
+				steps{
+					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'cypress/reports/mochareports', reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: ''])
+				}
+		}
+	}
+}

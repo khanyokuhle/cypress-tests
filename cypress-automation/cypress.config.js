@@ -8,7 +8,7 @@ module.exports = defineConfig({
     overwrite: true,
     saveHtml: true,
     saveJson: false,
-    reportFilename: 'Test_Report.html'
+    reportFilename: 'report.html'
   },
   e2e: {
     baseUrl: "https://react-redux.realworld.io",
