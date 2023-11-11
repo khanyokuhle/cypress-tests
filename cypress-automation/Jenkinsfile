@@ -8,12 +8,12 @@ pipeline {
 		}
 		stage('Install Dependencies'){
 				steps{
-					npm install &&
+					sh 'npm install'
 				}
 		}
 		stage('Run Tests'){
 				steps{
-					npm run-test
+					sh 'npm run-test'
 				}
 		}
 		stage('Publish HTML Report'){
