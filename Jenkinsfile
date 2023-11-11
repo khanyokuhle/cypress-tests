@@ -13,6 +13,7 @@ pipeline {
 		}
 		stage('Run Tests'){
 				steps{
+					sh 'cd cypress-automation'
 					sh 'npm run-test'
 				}
 		}
