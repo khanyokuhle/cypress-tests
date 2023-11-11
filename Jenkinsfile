@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Clone Git Repo'){
 				steps{
-					git 'https://github.com/khanyokuhle/cypress-tests.git'
+					sh 'git clone -b main https://github.com/khanyokuhle/cypress-tests.git'
 		    }
 		}
 		stage('Install Dependencies'){
