@@ -2,4 +2,4 @@
 .DS_Store
 
 # Cypress Files
-cypress/screenshots
+cypress-automation/cypress/screenshots
