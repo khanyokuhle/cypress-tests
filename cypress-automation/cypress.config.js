@@ -3,11 +3,12 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
-    charts: true,
-    reportPageTitle: 'Self Development Project',
-    embeddedScreenshots: true,
+    reportPageTitle: 'Cypress Automation',
     inlineAssets: true,
-    saveAllAttempts: false,
+    overwrite: true,
+    saveHtml: true,
+    saveJson: false,
+    reportFilename: 'Test_Report.html'
   },
   e2e: {
     baseUrl: "https://react-redux.realworld.io",
@@ -15,6 +16,7 @@ module.exports = defineConfig({
     viewportWidth: 900,
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
 });
