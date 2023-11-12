@@ -1,10 +1,5 @@
 pipeline {
-	agent {
-    	// this image provides everything needed to run Cypress
-    	docker {
-      		image 'cypress/base:20.9.0'
-    	}
-  	}
+	agent any
 	tools {
 		nodejs "Node20"
 	}
@@ -26,7 +21,7 @@ pipeline {
 				steps{
 					sh 'echo $PWD'
 					sh 'echo $WORKSPACE'
-					sh 'npm cypress run'
+					sh 'npm run run:test'
 				}
 		}
 		stage('Publish HTML Report'){
