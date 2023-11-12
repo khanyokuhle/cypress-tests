@@ -19,7 +19,7 @@ pipeline {
 		}
 		stage('Run Tests'){
 				steps{	
-					dir('$WORKSPACE/cypress-tests/'){
+					dir('cypress-tests/'){
 						sh 'echo $WORKSPACE'
 						sh 'cd cypress-tests/cypress-automation'
 						sh 'echo $PWD'
