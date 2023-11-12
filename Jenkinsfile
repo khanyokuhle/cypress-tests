@@ -1,10 +1,13 @@
 pipeline {
 	agent any
+	tools {
+		nodejs "Node12"
+	}
 	stages {
 		stage('Clone Git Repo'){
 				steps{
 					deleteDir()
-					
+
 					sh 'git clone -b main https://github.com/khanyokuhle/cypress-tests.git'
 		    }
 		}
