@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run-test": "cypress run"
+    "run:test": "cypress run"
   },
   "keywords": [],
   "author": "",
