@@ -21,8 +21,7 @@ pipeline {
 				steps{
 					sh 'echo $PWD'
 					sh 'echo $WORKSPACE'
-					sh 'ls'
-					sh 'cd cypress-tests'
+					sh 'cd cypress-tests/cypress-automation'
 					sh 'ls'
 					sh 'npm run execute'
 				}
