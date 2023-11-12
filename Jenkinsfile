@@ -18,6 +18,7 @@ pipeline {
 		}
 		stage('Run Tests'){
 				steps{
+					sh 'echo pwd'
 					sh 'cd cypress-automation'
 					sh 'npm run-test'
 				}
