@@ -20,7 +20,7 @@ pipeline {
 		stage('Run Tests'){
 				steps{	
 					echo "Current Workspace: ${WORKSPACE}"
-					dir('cypress-tests/'){
+					ws('cypress-tests/'){
 						echo "New Workspace: ${WORKSPACE}"
 						sh 'echo $PWD'
 						sh 'npm run execute'
