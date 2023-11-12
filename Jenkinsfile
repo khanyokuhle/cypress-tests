@@ -21,7 +21,7 @@ pipeline {
 				steps{
 					sh 'echo $PWD'
 					sh 'echo $WORKSPACE'
-					sh 'npm run run:test'
+					sh 'npm run runOnChrome'
 				}
 		}
 		stage('Publish HTML Report'){
