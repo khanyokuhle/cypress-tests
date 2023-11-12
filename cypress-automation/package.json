@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run:test": "cypress run"
+    "run:test": "cypress run",
+    "runOnChrome": "cypress run --browser chrome"
   },
   "keywords": [],
   "author": "",
