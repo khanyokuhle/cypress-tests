@@ -21,7 +21,6 @@ pipeline {
 				steps{	
 					dir('cypress-tests/'){
 						sh 'echo $WORKSPACE'
-						sh 'cd cypress-tests/cypress-automation'
 						sh 'echo $PWD'
 						sh 'npm run execute'
 					}				
