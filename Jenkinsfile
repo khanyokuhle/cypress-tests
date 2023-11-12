@@ -21,7 +21,7 @@ pipeline {
 				steps{
 					sh 'echo $PWD'
 					sh 'echo $WORKSPACE'
-					sh 'npm run runOnChrome'
+					sh 'npx cypress run'
 				}
 		}
 		stage('Publish HTML Report'){
