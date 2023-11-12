@@ -20,7 +20,7 @@ pipeline {
 				steps{
 					sh 'echo $PWD'
 					sh 'echo $WORKSPACE'
-					sh 'npm run-test'
+					sh 'npm cypress run'
 				}
 		}
 		stage('Publish HTML Report'){
