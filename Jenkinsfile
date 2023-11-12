@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	tools {
-		nodejs "Node12"
+		nodejs "Node20"
 	}
 	stages {
 		stage('Clone Git Repo'){
